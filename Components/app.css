@@ -283,7 +283,7 @@ button:active{
 @media only screen and (min-width: 376px) and (max-width: 496px){
 
         .notif-message{
-            left: 170px;
+            left: 200px;
         }
 
         .dark-mode-toggle{
