@@ -1,0 +1,281 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+}
+
+body{
+    transition: background-color .2s ease-in;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    color: rgb(111, 111, 111);
+    transition: background-color .2s ease-in;
+}
+
+
+/* heading styles */
+
+.heading{
+    position: absolute;
+    top: 90px;
+}
+
+.heading h1{
+    font-size: 3em;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.heading-dark-mode{
+    color: white;
+    transition: background-color .2s ease-in;
+}
+
+
+/* password generator container styles */
+
+.container{
+    background-color: rgb(237, 237, 237);
+    padding: 25px;
+    width: 19rem;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: -15px;
+    border-radius: 5px;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* media queriy for container's mobile size style */
+
+@media screen and (max-width: 375px){
+    .container{
+        width: 16rem;
+        height: 15rem;
+    }
+
+    .heading h1{
+        font-size: 2em;
+    }
+
+}
+
+/* display screen for generated passwords style*/
+
+.display-container{
+    width: 100%;
+    height: 40px;
+    background: rgb(243, 243, 243);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: black;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.display:focus{
+    box-shadow: 1px 3px 5px rgba(253, 253, 253, 0.727);
+}
+
+.displayscreen{
+    color: rgb(77, 77, 77);
+    height: 25px;
+    width: 10px;
+    flex-grow: 10;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding-left: 7px;
+}
+
+/* copy code icon style*/
+
+#copy-icon{
+    height: 29px;
+    width: 10px;
+    background-color: white;
+    flex-grow: 1;
+    cursor: pointer;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    margin-right: 5px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+#copy-icon:active{
+    box-shadow: 1px 3px 5px rgb(243, 243, 243);
+}
+
+/* password count input style */
+
+#count-input{
+    width: 50px;
+    border-radius: 5px;
+    border: none;
+    height: 27px;
+    outline: none;
+    padding: 5px;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+#count-input:focus{
+    box-shadow: 1px 3px 5px rgb(243, 243, 243);
+}
+
+.options{
+    display: flex;
+    justify-content: space-between;
+}
+
+.options:not(:last-child){
+    margin-bottom: 7px;
+}
+
+/* generate password button style*/
+
+button{
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: rgb(141, 141, 141);
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    position: relative;
+    overflow: hidden;
+    font-weight: 600;
+}
+
+button:active{
+    box-shadow: 1px 3px 5px rgba(253, 253, 253, 0.727);
+}
+
+/* follow me button style */
+
+.follow-btn{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 10px;
+    color: rgb(141, 141, 141);
+    overflow: hidden;
+    z-index: 20;
+}
+
+.follow-btn::before{
+    content: '';
+    background-color: #333;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    transform: translateY(-150%) translateX(90%)  rotate(55deg);
+    transition: all 0.5s ease-in-out;
+    z-index: -1;
+}
+
+.follow-btn:hover::before{
+    transform: translateY(-50%) rotate(40deg);
+    color: white;
+}
+
+.follow-btn:hover{
+    color: white;
+    transition: all 1s ease-in-out;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    outline: none;
+}
+
+/* dark mode toggle style */
+
+.dark-mode-toggle{
+    position: relative;
+    top: 20px;
+    right: -90%;
+    background-color: #333;
+    width: 45px;
+    height: 25px;
+}
+
+@media screen and (max-width: 375px){
+    .dark-mode-toggle{
+        right: -82%;
+    }
+}
+
+.dm-btn{
+    width: 13px;
+    height: 13px;
+    background-color: white;
+    position: absolute;
+    top: 6px;
+    left: 7px;
+    transition: all .2s ease-in;
+}
+
+/* darkmode class/properties */
+
+.darkmode{
+    background-color: #333;
+}
+
+.slide{
+    transform: translateX(18px);
+    background-color: #333;
+    width: 10px;
+    height: 10px;
+    top: 8px;
+}
+
+.btn-background-toggle{
+    background-color: white;
+}
+
+
+/* notification button style */
+
+.notif-message{
+    position: absolute;
+    padding: 7;
+    background-color: rgb(237, 237, 237);
+    border-radius: 5px;
+    bottom: 150px;
+    left: 46%;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.show-notif{
+    bottom: 100px;
+    opacity: 1;
+}
+
+/* media queriy for notification */
+
+@media screen and (max-width: 375px){
+    .notif-message{
+        left: 110px;
+    }
+}
+
+

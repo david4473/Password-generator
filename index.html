@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.css">
+    <title>password generator</title>
+</head>
+<body>
+    <main>
+        <div class="notification">
+            <div class="notif-message">Copied to clipboard</div>
+        </div>
+        <div class="hover-button">
+            <a href="">
+                <button class="follow-btn">
+                    Follow me
+                </button>
+            </a>
+        </div>
+        <div class="dark-mode-toggle">
+            <div class="dm-btn"></div>
+        </div>
+        <section class="sec">
+            <div class="heading">
+                <h1 id="heading">Password Generator</h1>
+            </div>
+            <div class="container">
+                <div class="display-container">
+                    <div class="displayscreen"></div>
+                    <div id="copy-icon"></div>
+                </div>
+                <div class="pref">
+                    <div class="options">
+                        <label for="Password count">Password count</label>
+                        <input type="number" id="count-input" class="count">
+                    </div>
+                    <div class="options">
+                        <label for="uppercase">Uppercase</label>
+                        <input type="checkbox" name="uppercase" value="uppercase" id="uppercase">
+                    </div>
+                    <div class="options">
+                        <label for="Lowercase">Lowercase</label>
+                        <input type="checkbox" value="lowercase" id="lowercase">
+                    </div>
+                    <div class="options">
+                        <label for="Number">Number</label>
+                        <input type="checkbox" value="number" id="number">
+                    </div>
+                    <div class="options">
+                        <label for="Symbol">Symbol</label>
+                        <input type="checkbox" value="symbol" id="symbol">
+                    </div>
+                </div>
+                <button id="submit">Generate password</button>
+            </div>
+        </section>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
